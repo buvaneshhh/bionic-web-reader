@@ -3,6 +3,20 @@
 Accelerate reading speed, focus, and comprehension on articles, blogs, news feeds, and any website using guided **Bionic Reading** fixation anchors.
 
 ---
+## 📦 Installation Instructions
+
+1. Open Google Chrome (or any Chromium-based browser like Brave, Edge, Opera).
+2. Navigate to `chrome://extensions/` in your address bar.
+3. Enable **Developer mode** using the toggle switch in the top right corner.
+4. Click **Load unpacked** in the top left.
+5. Select this folder:
+   ```
+   /home/buavnesh/project/bionic-reader-extension
+   ```
+6. The extension is now active! Pin it to your toolbar for quick access.
+
+
+---
 
 ## 🚀 Key Features
 
@@ -28,19 +42,6 @@ Accelerate reading speed, focus, and comprehension on articles, blogs, news feed
   - Active status pill (`ON` / `OFF`) and toolbar badge synchronization.
   - Persists settings across browser sessions via `chrome.storage.local`.
 
----
-
-## 📦 Installation Instructions
-
-1. Open Google Chrome (or any Chromium-based browser like Brave, Edge, Opera).
-2. Navigate to `chrome://extensions/` in your address bar.
-3. Enable **Developer mode** using the toggle switch in the top right corner.
-4. Click **Load unpacked** in the top left.
-5. Select this folder:
-   ```
-   /home/buavnesh/project/bionic-reader-extension
-   ```
-6. The extension is now active! Pin it to your toolbar for quick access.
 
 ---
 
