@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bionic Web Reader</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <header class="popup-header">
+      <div class="brand-group">
+        <div class="brand-logo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+          </svg>
+        </div>
+        <div class="brand-titles">
+          <h1 class="brand-name"><b>Bio</b>nic Reader</h1>
+          <span class="brand-subtitle">Flow Web Mode</span>
+        </div>
+      </div>
+      
+      <!-- Status Badge -->
+      <div id="status-pill" class="status-pill inactive">
+        <span class="status-dot"></span>
+        <span id="status-text" class="status-label">OFF</span>
+      </div>
+    </header>
+
+    <!-- Main Content Controls -->
+    <main class="popup-content">
+      
+      <!-- Live Preview Box -->
+      <div class="preview-box">
+        <div class="preview-label">Live Preview</div>
+        <p id="preview-text" class="preview-text">
+          <b>Bio</b>nic <b>rea</b>ding <b>gui</b>des <b>yo</b>ur <b>ey</b>es <b>throu</b>gh <b>artif</b>icial <b>fixa</b>tion <b>poi</b>nts.
+        </p>
+      </div>
+
+      <!-- Fixation Strength Slider -->
+      <div class="control-group">
+        <div class="control-header">
+          <label for="fixation-range" class="control-label">Fixation Strength</label>
+          <span id="fixation-badge" class="value-badge">45%</span>
+        </div>
+        <div class="slider-wrapper">
+          <span class="slider-bound">30%</span>
+          <input type="range" id="fixation-range" min="30" max="75" value="45" step="5" class="custom-slider">
+          <span class="slider-bound">75%</span>
+        </div>
+      </div>
+
+      <!-- Saccade Frequency Mode -->
+      <div class="control-group">
+        <div class="control-header">
+          <label for="saccade-mode" class="control-label">Saccade Rhythm</label>
+        </div>
+        <div class="select-wrapper">
+          <select id="saccade-mode" class="custom-select">
+            <option value="all">All Words</option>
+            <option value="alternating">Every 2nd Word (Alternating)</option>
+            <option value="long-only">Long Words Only (&gt; 3 chars)</option>
+          </select>
+          <svg class="select-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="button-group">
+        <button id="btn-toggle" class="btn btn-primary" title="Apply or Toggle Bionic Reading on this page">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          <span id="btn-toggle-text">Apply to Page</span>
+        </button>
+
+        <button id="btn-revert" class="btn btn-secondary" title="Restore original text">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+            <path d="M3 3v5h5"/>
+          </svg>
+          <span>Original</span>
+        </button>
+      </div>
+
+      <!-- Shortcut & Info Footer -->
+      <footer class="popup-footer">
+        <div class="shortcut-pill" title="Press Alt+B on any webpage to instantly toggle Bionic Reading">
+          <span class="shortcut-label">Shortcut:</span>
+          <kbd class="shortcut-key">Alt</kbd>
+          <span class="shortcut-plus">+</span>
+          <kbd class="shortcut-key">B</kbd>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

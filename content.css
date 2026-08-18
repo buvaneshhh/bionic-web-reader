@@ -1,0 +1,21 @@
+/**
+ * Bionic Web Reader - Content Styles
+ */
+
+.bionic-bold {
+  font-weight: 700 !important;
+  color: inherit !important;
+  display: inline !important;
+  letter-spacing: normal !important;
+}
+
+/* Subtle contrast boost for enhanced fixation focus */
+.bionic-container {
+  display: inline !important;
+}
+
+/* Ensure no visual layout jumping */
+.bionic-word {
+  display: inline !important;
+  white-space: inherit !important;
+}
